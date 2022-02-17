@@ -3,3 +3,70 @@
     Author     : Jisung Kim
 */
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.banner-header {
+    display: flex;
+}
+
+.banner-header__logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    border-radius: 15px;
+}
+
+.banner-header__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.banner-header__title h1 {
+    color: #252a57;
+    margin-bottom: 10px;
+}
+
+.banner-header__title h2 {
+    color: #cf5257;
+    font-style: italic;
+}
+
+.nav {
+    /*width: 100%;*/
+    margin: 20px 0;
+    border-top: 2px solid #71a1df;
+    border-bottom: 2px solid #71a1df;
+}
+
+.nav__list {
+    margin: 5px 0;
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+}
+
+.nav__page {
+    padding: 0 25px;
+    border-left: 2px solid #252a57;
+    font-weight: bold;
+}
+
+.nav__link {
+    color: #cf5257;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: right;
+    padding: 15px 0;
+    border-top: 2px solid #71a1df;
+}
