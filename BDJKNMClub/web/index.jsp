@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/main.css" type="text/css"/>
     </head>
     <body>
-        <div class="main">
+        <div class="container">
             <section class="main__title">
                 <h3>Java Web Technologies: Section 3</h3>
             </section>
