@@ -98,15 +98,15 @@ public class BDJKNMAddBookServlet extends HttpServlet {
         
         if (bookCode == null || bookCode == "")
         {
-            message += "Please enter the code. <br />";
+            message += "Book code is required. <br />";
         }
         if (bookDescription == null || bookDescription == "" || bookDescription.length() < 3)
         {
-            message += "Please enter the description. <br />";
+            message += "Description must have at least 3 characters. <br />";
         }
         if (bookQuantity <= 0)
         {
-            message += "Please enter the quantity. <br />";
+            message += "uantity must be a positive number. <br />";
         }
         
         if (message == "") {

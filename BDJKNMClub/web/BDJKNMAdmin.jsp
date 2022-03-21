@@ -12,11 +12,9 @@
 
 <div class="container">
     <h2>Admin : Data Maintenance</h2>
-    <!--<div>-->
-        <a class="maintain-books__link" href="BDJKNMDisplayBooks">
+    <a class="maintain-books__link" href="BDJKNMDisplayBooks">
             Maintain Books
-        </a>
-    <!--</div>-->
+    </a>
 </div>
 
 

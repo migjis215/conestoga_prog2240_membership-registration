@@ -10,6 +10,7 @@
     <section class="add-book-form__title">
         <h3>Add a Book</h3>
     </section>
+    <p class="message"><i>${message}</i></p>
     <form class="add-book-form" action="BDJKNMAddBook" method="post">
         <label for="code">Code:</label>
         <input class="add-book-form__code" type="text" name="code" value="${book.code}" style="width:100px"/><br/>
