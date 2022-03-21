@@ -25,8 +25,9 @@ public class BDJKNMDisplayBooksServlet extends HttpServlet {
         String path = context.getRealPath("/WEB-INF/books.txt");
         ArrayList<Book> books = BookIO.getBooks(path);
         request.setAttribute("books", books);
+        
         RequestDispatcher dispatcher = getServletContext()
-        .getRequestDispatcher("/BDJKNMDisplayBooks.jsp");
+            .getRequestDispatcher("/BDJKNMDisplayBooks.jsp");
         dispatcher.forward(request, response);
     }
 
