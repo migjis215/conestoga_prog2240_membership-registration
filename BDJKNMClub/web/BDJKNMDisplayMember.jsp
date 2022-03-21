@@ -4,7 +4,7 @@
     Author     : Jisung Kim
 --%>
 
-<jsp:include page="banner.jsp" />
+<jsp:include page="BDJKNMBanner.jsp" />
 
 <div class="container">
     <section class="display-member__title">
@@ -26,10 +26,10 @@
             To register anoter member, click on the Back button in your browser or <br/>
             the Return button shown below.
         </p>
-        <form action="register.jsp">
+        <form action="BDJKNMRegister.jsp">
             <input class="display-member__btn" type="submit" value="Return"/>
         </form>
     </section>
 </div>
 
-<jsp:include page="footer.jsp" />
+<jsp:include page="BDJKNMFooter.jsp" />

@@ -24,13 +24,13 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__page">
-                    <a class="nav__link" href="index.jsp">Home</a>
+                    <a class="nav__link" href="BDJKNMIndex.jsp">Home</a>
                 </li>
                 <li class="nav__page">
-                    <a class="nav__link" href="register.jsp">Register</a>
+                    <a class="nav__link" href="BDJKNMRegister.jsp">Register</a>
                 </li>
                 <li class="nav__page">
-                    <a class="nav__link" href="admin.jsp">Admin</a>
+                    <a class="nav__link" href="BDJKNMAdmin.jsp">Admin</a>
                 </li>
             </ul>
         </nav>

@@ -4,13 +4,13 @@
     Author     : Jisung Kim
 --%>
 
-<jsp:include page="banner.jsp" />
+<jsp:include page="BDJKNMBanner.jsp" />
 
 <div class="container">
     <section class="register-form__title">
         <h3>New Member Registration Form</h3>
     </section>
-    <form class="register-form" action="displayMember.jsp" method="post">
+    <form class="register-form" action="BDJKNMDisplayMember.jsp" method="post">
         <label for="fullName">Full Name:</label>
         <input class="register-form__fullName" type="text" name="fullName" style="width:200px" required/><br/>
         <label for="email">Email:</label>
@@ -40,4 +40,4 @@
     </form>
 </div>
 
-<jsp:include page="footer.jsp" />
+<jsp:include page="BDJKNMFooter.jsp" />

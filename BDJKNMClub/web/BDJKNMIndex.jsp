@@ -4,7 +4,7 @@
     Author     : Jisung Kim
 --%>
 
-<jsp:include page="banner.jsp" />
+<jsp:include page="BDJKNMBanner.jsp" />
 
 <div class="container">
     <section class="main__title">
@@ -23,4 +23,4 @@
     </section>
 </div>
                 
-<jsp:include page="footer.jsp" />
+<jsp:include page="BDJKNMFooter.jsp" />
