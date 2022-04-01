@@ -8,6 +8,10 @@
         <servlet-name>BDJKNMAddBookServlet</servlet-name>
         <servlet-class>club.admin.BDJKNMAddBookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BDJKNMLoanServlet</servlet-name>
+        <servlet-class>club.cart.BDJKNMLoanServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BDJKNMDisplayBooksServlet</servlet-name>
         <url-pattern>/BDJKNMDisplayBooks</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>BDJKNMAddBookServlet</servlet-name>
         <url-pattern>/BDJKNMAddBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BDJKNMLoanServlet</servlet-name>
+        <url-pattern>/BDJKNMLoan</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
