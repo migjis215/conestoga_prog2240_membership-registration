@@ -30,6 +30,12 @@
                     <a class="nav__link" href="BDJKNMRegister.jsp">Register</a>
                 </li>
                 <li class="nav__page">
+                    <a class="nav__link" href="BDJKNMLoan.jsp">eLoan</a>
+                </li>
+                <li class="nav__page">
+                    <a class="nav__link" href="BDJKNMCart.jsp">eCart</a>
+                </li>
+                <li class="nav__page">
                     <a class="nav__link" href="BDJKNMAdmin.jsp">Admin</a>
                 </li>
             </ul>
