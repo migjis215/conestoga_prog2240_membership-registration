@@ -16,6 +16,10 @@
         <servlet-name>BDJKNMCartServlet</servlet-name>
         <servlet-class>club.cart.BDJKNMCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BDJKNMClearCartServlet</servlet-name>
+        <servlet-class>club.cart.BDJKNMClearCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BDJKNMDisplayBooksServlet</servlet-name>
         <url-pattern>/BDJKNMDisplayBooks</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>BDJKNMCartServlet</servlet-name>
         <url-pattern>/BDJKNMCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BDJKNMClearCartServlet</servlet-name>
+        <url-pattern>/BDJKNMClearCart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

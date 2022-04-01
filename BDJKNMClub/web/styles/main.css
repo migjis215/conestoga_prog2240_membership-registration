@@ -164,12 +164,11 @@ h2 {
 }
 
 .list-of-loan-items__link,
-.display-cart__link {
+.cart-menu__link {
     font-weight: bold;
     color: #cf5257;
 }
 
-.display-cart__link {
-    display: block;
-    /*margin-top: 5px;*/
+.cart-menu {
+    margin-top: 10px;
 }

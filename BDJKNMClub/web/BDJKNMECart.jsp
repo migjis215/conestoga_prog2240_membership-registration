@@ -34,18 +34,21 @@
             </tr>
             <c:set var="count" scope="page" value="${count + book.quantity}"/>
         </c:forEach>
-            <tr>
-                <td colspan="2" height="80" align="right">
-                    Total:
-                </td>
-                <td align="right">
-                    ${count}
-                </td>
-            </tr>
+        <tr>
+            <td colspan="2" height="80" align="right">
+                Total:
+            </td>
+            <td align="right">
+                ${count}
+            </td>
+        </tr>
     </table>
-                <br />
-                <a class="display-cart__link" href="#">Clear the cart</a><br />
-                <a class="display-cart__link" href="BDJKNMLoan">Return to eLoan</a>
+    <div class="cart-menu">
+        <a class="cart-menu__link" href="BDJKNMClearCart">Clear the cart</a>
+    </div>
+    <div class="cart-menu">
+        <a class="cart-menu__link" href="BDJKNMLoan">Return to eLoan</a>
+    </div>
 </div>
 
 <jsp:include page="BDJKNMFooter.jsp" />
