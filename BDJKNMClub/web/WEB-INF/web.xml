@@ -20,6 +20,10 @@
         <servlet-name>BDJKNMClearCartServlet</servlet-name>
         <servlet-class>club.cart.BDJKNMClearCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BDJKNMMemberAdminController</servlet-name>
+        <servlet-class>club.admin.BDJKNMMemberAdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BDJKNMDisplayBooksServlet</servlet-name>
         <url-pattern>/BDJKNMDisplayBooks</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>BDJKNMClearCartServlet</servlet-name>
         <url-pattern>/BDJKNMClearCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BDJKNMMemberAdminController</servlet-name>
+        <url-pattern>/BDJKNMMemberAdmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
