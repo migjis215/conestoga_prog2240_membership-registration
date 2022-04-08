@@ -2,7 +2,7 @@ package club.business;
 
 import java.io.Serializable;
 
-public class Member implements Serializable {
+public class BDJKNMMember implements Serializable {
 
     private String fullName = "";
     private String emailAddress = "";
@@ -11,7 +11,7 @@ public class Member implements Serializable {
     private int yearLevel = 0;
     private boolean valid = false;
 
-    public Member() {
+    public BDJKNMMember() {
         fullName = "";
         emailAddress = "";
         phoneNumber = "";
@@ -19,7 +19,7 @@ public class Member implements Serializable {
         yearLevel = 0;
     }
 
-    public Member(String full, String email) {
+    public BDJKNMMember(String full, String email) {
         fullName = full;
         emailAddress = email;
     }
