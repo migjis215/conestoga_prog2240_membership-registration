@@ -11,7 +11,7 @@
     <a class="maintain-books__link" href="BDJKNMDisplayBooks">
             Maintain Books
     </a>
-    <a class="maintain-books__link" href="BDJKNMMemberAdmin" action="displayMembers">
+    <a class="maintain-books__link" href="BDJKNMMemberAdmin">
             Display Members
     </a>
 </div>

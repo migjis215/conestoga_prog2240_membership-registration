@@ -96,12 +96,15 @@ h2 {
 }
 
 .register-form__title,
-.add-book-form__title {
+.add-book-form__title,
+.add-member-form__title {
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .register-form label,
 .add-book-form label,
+.add-member-form label,
 .display-member__details label {
     display: inline-block;
     width: 100px;
@@ -154,6 +157,7 @@ h2 {
 
 .message {
     color: red;
+    margin-bottom: 5px;
 }
 
 .list-of-loan-items {

@@ -57,9 +57,10 @@
         %>
     </table>
     
-    <a href="BDJKNMAddBook.jsp">
-        <input class="list-of-members__btn" type="button" value="Add Member"/>
-    </a>
+    <form action="BDJKNMMemberAdmin" method ="post">
+        <input type="hidden" name="action" value="addMember">
+        <input class="list-of-members__btn" type="submit" value="Add Member"/>
+    </form>
 </div>
 
 <jsp:include page="BDJKNMFooter.jsp" />

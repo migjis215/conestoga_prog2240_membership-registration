@@ -12,7 +12,7 @@
     </section>
     <section class="main__team">
         <p>Pair Programming Team:</p>
-        <h3>Assignment 1</h3>
+        <h3>Assignment 4</h3>
         <h3>Driver: Jisung Kim</h3>
         <h3>Observer: Brendan Donnachie</h3>
         <h3>Observer: Nate Mrakava</h3>

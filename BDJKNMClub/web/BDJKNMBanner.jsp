@@ -27,7 +27,7 @@
                     <a class="nav__link" href="BDJKNMIndex.jsp">Home</a>
                 </li>
                 <li class="nav__page">
-                    <a class="nav__link" href="BDJKNMRegister.jsp">Register</a>
+                    <a class="nav__link" href="BDJKNMAddMember.jsp">Register</a>
                 </li>
                 <li class="nav__page">
                     <a class="nav__link" href="BDJKNMLoan">eLoan</a>
