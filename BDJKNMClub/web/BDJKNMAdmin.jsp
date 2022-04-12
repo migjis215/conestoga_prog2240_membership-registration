@@ -11,6 +11,9 @@
     <a class="maintain-books__link" href="BDJKNMDisplayBooks">
             Maintain Books
     </a>
+    <a class="maintain-books__link" href="BDJKNMMemberAdmin" action="displayMembers">
+            Display Members
+    </a>
 </div>
 
 <jsp:include page="BDJKNMFooter.jsp" />
