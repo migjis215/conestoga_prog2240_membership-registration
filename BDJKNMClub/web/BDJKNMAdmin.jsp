@@ -4,6 +4,8 @@
     Author     : Jisung Kim
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <jsp:include page="BDJKNMBanner.jsp" />
 
 <div class="container">
@@ -11,7 +13,7 @@
     <a class="maintain-books__link" href="BDJKNMDisplayBooks">
             Maintain Books
     </a>
-    <a class="maintain-books__link" href="BDJKNMMemberAdmin">
+    <a class="maintain-books__link" href="<c:url value="BDJKNMMemberAdmin?action=displayMembers"/>">
             Display Members
     </a>
 </div>

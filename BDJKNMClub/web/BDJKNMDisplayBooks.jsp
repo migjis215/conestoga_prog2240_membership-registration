@@ -37,7 +37,8 @@
                 </td>
                 <td align="right">
                     <c:if test="${item.quantity >= 1}">
-                        <a class="list-of-loan-items__link" href="<c:url value="BDJKNMCart?action=reserve&code=${item.code}" />">
+                        <a class="list-of-loan-items__link" 
+                           href="<c:url value="BDJKNMCart?action=reserve&code=${item.code}" />">
                             Reserve
                         </a>
                     </c:if>

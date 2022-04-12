@@ -48,8 +48,14 @@
                 %>
             </td>
             <td>
-                <a class="list-of-members__link" href="editRecords.jsp?id=<%=resultSet.getInt(1)%>&firstName=<%=resultSet.getString(2)%>&lastName=<%=resultSet.getString(3)%>&email=<%=resultSet.getString(4)%>">Edit</a>
-                <a class="list-of-members__link" href="UserServlet?action=delete&id=<%=resultSet.getInt(1)%>">Remove</a>
+                <a class="list-of-members__link" 
+                   href="BDJKNMMemberAdmin?action=editMember&email=<%=resultSet.getString(3)%>">
+                    Edit
+                </a>
+                <a class="list-of-members__link" 
+                   href="UserServlet?action=delete&id=<%=resultSet.getInt(1)%>">
+                    Remove
+                </a>
             </td>
         </tr>
         <%
@@ -57,7 +63,7 @@
         %>
     </table>
     
-    <form action="BDJKNMMemberAdmin" method ="post">
+    <form action="BDJKNMMemberAdmin">
         <input type="hidden" name="action" value="addMember">
         <input class="list-of-members__btn" type="submit" value="Add Member"/>
     </form>
