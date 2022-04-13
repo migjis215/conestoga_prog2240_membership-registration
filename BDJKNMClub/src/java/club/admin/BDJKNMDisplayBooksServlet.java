@@ -4,7 +4,6 @@ import club.business.Book;
 import club.data.BookIO;
 import java.io.IOException;
 import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,9 +25,9 @@ public class BDJKNMDisplayBooksServlet extends HttpServlet {
         ArrayList<Book> books = BookIO.getBooks(path);
         request.setAttribute("books", books);
         
-        RequestDispatcher dispatcher = getServletContext()
-            .getRequestDispatcher("/BDJKNMDisplayBooks.jsp");
-        dispatcher.forward(request, response);
+        getServletContext()
+            .getRequestDispatcher("/BDJKNMDisplayBooks.jsp")
+            .forward(request, response);
     }
 
     @Override

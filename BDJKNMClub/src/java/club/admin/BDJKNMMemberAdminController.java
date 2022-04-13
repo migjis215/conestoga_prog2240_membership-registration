@@ -3,6 +3,7 @@ package club.admin;
 import club.business.BDJKNMMember;
 import club.data.MemberDB;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,19 +29,30 @@ public class BDJKNMMemberAdminController extends HttpServlet {
         }
 
         if (action.equals("displayMembers")) {
+            
             url = "/BDJKNMDisplayMembers.jsp";
         } else if (action.equals("addMember")) {
             url = "/BDJKNMAddMember.jsp";
         } else if (action.equals("saveMember")) {
             url = saveMember(request, response);
-        } else if (action.equals("editMember")) {
+        } else {
             BDJKNMMember member = MemberDB.selectMember(request.getParameter("email"));
             request.setAttribute("member", member);
-            url = "/BDJKNMEditMember.jsp";
-        } else if (action.equals("deleteMember")) {
 
+            if (action.equals("editMember")) {
+                url = "/BDJKNMEditMember.jsp";
+            } else if (action.equals("removeMember")) {
+                url = "/BDJKNMRemoveMember.jsp";
+            } else if (action.equals("deleteMember")) {
+                int i = MemberDB.delete(member);
+                request.setAttribute("records", i);
+                url = "/BDJKNMDisplayMembers.jsp";
+            } 
         }
 
+        ArrayList<BDJKNMMember> members = MemberDB.selectMembers();
+            request.setAttribute("members", members);
+        
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
@@ -50,7 +62,7 @@ public class BDJKNMMemberAdminController extends HttpServlet {
         String message = "";
         String url = "";
         int i = 0;
-        
+
         String db_operation = request.getParameter("db_operation");
         if (db_operation == null) {
             db_operation = "insert";
@@ -79,11 +91,11 @@ public class BDJKNMMemberAdminController extends HttpServlet {
         if (!member.isValid()) {
             if (db_operation.equals("update")) {
                 message = "Cannot update the record. Please provide a valid name.";
+                url = "/BDJKNMEditMember.jsp";
             } else if (db_operation.equals("insert")) {
                 message = "Cannot insert a new record. Please provide a valid name and/or email.";
+                url = "/BDJKNMAddMember.jsp";
             }
-            
-            url = "/BDJKNMAddMember.jsp";
         } else {
             message = "";
             url = "/BDJKNMDisplayMembers.jsp";
@@ -101,7 +113,7 @@ public class BDJKNMMemberAdminController extends HttpServlet {
 
         return url;
     }
-    
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

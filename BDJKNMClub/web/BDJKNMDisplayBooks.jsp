@@ -19,7 +19,7 @@
             <th align="left">Action</th>
             <th></th>
         </tr>
-        <c:forEach var="item" items="${applicationScope.loanitems}">
+        <c:forEach var="item" items="${books}">
             <tr>
                 <td align="left">
                     ${item.code}

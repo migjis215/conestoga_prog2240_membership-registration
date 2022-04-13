@@ -22,7 +22,13 @@ public class BDJKNMCartServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ServletContext context = getServletContext();
+        String path = context.getRealPath("/WEB-INF/books.txt");
         ArrayList<Book> loanItems = (ArrayList<Book>)context.getAttribute("loanitems");
+        
+        if (loanItems == null) {
+            loanItems = ELoan.loadItems(path);
+            context.setAttribute("loanitems", loanItems);
+        }    
         
         HttpSession mySession = request.getSession();
         ECart myCart = (ECart)mySession.getAttribute("myCart");

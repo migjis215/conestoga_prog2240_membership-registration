@@ -33,7 +33,6 @@ public class BDJKNMLoanServlet extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext()
             .getRequestDispatcher("/BDJKNMELoan.jsp");
         dispatcher.forward(request, response);
-        
     }
 
     @Override

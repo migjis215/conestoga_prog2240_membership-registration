@@ -10,7 +10,7 @@
 
 <div class="container">
     <h2>Admin : Data Maintenance</h2>
-    <a class="maintain-books__link" href="BDJKNMDisplayBooks">
+    <a class="maintain-books__link" href="<c:url value="BDJKNMDisplayBooks"/>">
             Maintain Books
     </a>
     <a class="maintain-books__link" href="<c:url value="BDJKNMMemberAdmin?action=displayMembers"/>">

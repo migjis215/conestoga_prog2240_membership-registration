@@ -4,8 +4,7 @@
     Author     : Jisung Kim
 --%>
 
-<%@page import="club.data.DBUtil"%>
-<%@page import="java.sql.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="BDJKNMBanner.jsp" />
 
@@ -20,53 +19,38 @@
             <th align="left">Year</th>
             <th></th>
         </tr>
-        <%
-            Connection con = DBUtil.getConnection();
-            Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM member");
-            while (resultSet.next()) {
-        %>
-        <tr>
-            <td>
-                <%
-                    out.print(resultSet.getString(3));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(resultSet.getString(2));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(resultSet.getString(5));
-                %>
-            </td>
-            <td>
-                <%
-                    out.print(resultSet.getInt(6));
-                %>
-            </td>
-            <td>
-                <a class="list-of-members__link" 
-                   href="BDJKNMMemberAdmin?action=editMember&email=<%=resultSet.getString(3)%>">
-                    Edit
-                </a>
-                <a class="list-of-members__link" 
-                   href="UserServlet?action=delete&id=<%=resultSet.getInt(1)%>">
-                    Remove
-                </a>
-            </td>
-        </tr>
-        <%
-            }
-        %>
+        <c:forEach items="${members}" var="member">
+            <tr>
+                <td>
+                    ${member.emailAddress}
+                </td>
+                <td>
+                    ${member.fullName}
+                </td>
+                <td>
+                    ${member.programName}
+                </td>
+                <td>
+                    ${member.yearLevel}
+                </td>
+                <td>
+                    <a class="list-of-members__link" 
+                       href="BDJKNMMemberAdmin?action=editMember&email=${member.emailAddress}">
+                        Edit
+                    </a>
+                    &nbsp;
+                    <a class="list-of-members__link" 
+                       href="BDJKNMMemberAdmin?action=removeMember&email=${member.emailAddress}">
+                        Remove
+                    </a>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
     
-    <form action="BDJKNMMemberAdmin">
-        <input type="hidden" name="action" value="addMember">
+    <a href="BDJKNMMemberAdmin?action=addMember">
         <input class="list-of-members__btn" type="submit" value="Add Member"/>
-    </form>
+    </a>
 </div>
 
 <jsp:include page="BDJKNMFooter.jsp" />

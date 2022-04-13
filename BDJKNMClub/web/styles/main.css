@@ -97,14 +97,14 @@ h2 {
 
 .register-form__title,
 .add-book-form__title,
-.add-member-form__title {
+.member-form__title {
     font-size: 20px;
     margin-bottom: 5px;
 }
 
 .register-form label,
 .add-book-form label,
-.add-member-form label,
+.member-form label,
 .display-member__details label {
     display: inline-block;
     width: 100px;
@@ -183,4 +183,8 @@ h2 {
 
 .list-of-members__title {
     margin-bottom: 10px;
+}
+
+.member-form__link {
+    margin-left: 5px;
 }

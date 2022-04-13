@@ -9,9 +9,9 @@
 <jsp:include page="BDJKNMBanner.jsp" />
 
 <div class="container">
-    <h3 class="add-member-form__title">Edit an Existing Member</h3>
+    <h3 class="member-form__title">Edit an Existing Member</h3>
     <div class="message"><i>${message}</i></div>
-    <form class="add-member-form" 
+    <form class="member-form" 
           action="BDJKNMMemberAdmin?email=${member.emailAddress}&action=saveMember&db_operation=update" 
           method="post">
         <label for="email">Email:</label>
@@ -22,9 +22,9 @@
         <input type="text" name="phone" value="${member.phoneNumber}" style="width:100px"/><br/>
         <label for="program">IT Program:</label>
         <select name="program">
-            <c:forEach items="${programs}" var="program" varStatus="loop">
+            <c:forEach items="${programs}" var="program">
                 <option value="${program}"  
-                    <c:if test="${program eq member.programName}">
+                    <c:if test="${program == member.programName}">
                         selected="selected"
                     </c:if>>
                     ${program}
@@ -35,7 +35,7 @@
         <select name="year">
             <c:forEach begin="1" end="4" var="year">
                 <option value="${year}" 
-                    <c:if test="${year eq member.yearLevel}">
+                    <c:if test="${year == member.yearLevel}">
                         selected="selected"
                     </c:if>>
                     ${year}
